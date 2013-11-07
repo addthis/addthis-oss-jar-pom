@@ -375,4 +375,10 @@
     </plugins>
   </reporting>
 
+  <developers>
+    <developer>
+      <name>AddThis and Contributors</name>
+    </developer>
+  </developers>
+
 </project>
