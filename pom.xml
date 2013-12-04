@@ -64,6 +64,7 @@
     <dep.plugin.jacoco.version>0.6.3.201306030806</dep.plugin.jacoco.version>
     <dep.plugin.javadoc.version>2.9.1</dep.plugin.javadoc.version>
     <dep.plugin.findbugs.version>2.5.3</dep.plugin.findbugs.version>
+    <dep.plugin.checkstyle.configLocation>https://raw.github.com/addthis/addthis-oss-jar-pom/v3.1.0/checkstyle/default.xml</dep.plugin.checkstyle.configLocation>
   </properties>
 
   <dependencies>
