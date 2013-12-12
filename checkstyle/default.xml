@@ -214,8 +214,8 @@
         <!--
             <module name="DesignForExtension"/>
         -->
-        <module name="FinalClass"/>
         <!--  too findbugsy
+            <module name="FinalClass"/>
             <module name="HideUtilityClassConstructor"/>
         -->
 
