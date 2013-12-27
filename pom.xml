@@ -97,7 +97,6 @@
           <artifactId>maven-surefire-plugin</artifactId>
           <version>${dep.plugin.surefire.version}</version>
           <configuration>
-            <forkMode>once</forkMode>
             <excludedGroups>${at.test.excluded.groups}</excludedGroups>
           </configuration>
         </plugin>
