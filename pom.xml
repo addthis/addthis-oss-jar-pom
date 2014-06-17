@@ -53,11 +53,11 @@
 
     <!-- core dependencies -->
     <dep.junit.version>4.11</dep.junit.version>
-    <dep.slf4j.version>1.7.5</dep.slf4j.version>
+    <dep.slf4j.version>1.7.7</dep.slf4j.version>
     <dep.metrics.version>2.2.0</dep.metrics.version>
-    <dep.guava.version>15.0</dep.guava.version>
+    <dep.guava.version>17.0</dep.guava.version>
     <dep.joda-time.version>2.3</dep.joda-time.version>
-    <dep.jackson.version>2.2.3</dep.jackson.version>
+    <dep.jackson.version>2.3.2</dep.jackson.version>
 
     <!-- plugins referenced multiple times -->
     <dep.plugin.surefire.version>2.17</dep.plugin.surefire.version>
