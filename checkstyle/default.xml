@@ -203,7 +203,9 @@
         <!--  Allowable port ranges and such are not magic
             <module name="MagicNumber"/>
         -->
-        <module name="MissingSwitchDefault" value="warning"/>
+        <module name="MissingSwitchDefault">
+          <property name="severity" value="warning"/>
+        </module>
         <module name="RedundantThrows">
           <property name="severity" value="warning"/>
         </module>
@@ -222,7 +224,9 @@
             <module name="HideUtilityClassConstructor"/>
         -->
 
-        <module name="InterfaceIsType" value="warning"/>
+        <module name="InterfaceIsType">
+          <property name="severity" value="warning"/>
+        </module>
         <!-- somtimes not having crazy verbosity is better
              <module name="VisibilityModifier"/>
         -->
