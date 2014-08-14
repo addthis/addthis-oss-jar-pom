@@ -49,6 +49,7 @@
     <!-- custom properties prefixed with 'at.' -->
     <at.test.excluded.groups />
     <at.check.skip.all>false</at.check.skip.all>
+    <enforcer.skip>true</enforcer.skip>
 
     <!-- core dependencies -->
     <dep.junit.version>4.11</dep.junit.version>
@@ -332,8 +333,8 @@
             </execution>
           </executions>
           <configuration>
-            <skip>${at.check.skip.all}</skip>
-            <fail>false</fail>
+            <fail>true</fail>
+            <skip>${enforcer.skip}</skip>
             <failFast>false</failFast>
             <rules>
               <DependencyConvergence />
