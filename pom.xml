@@ -125,6 +125,12 @@
         <version>${dep.slf4j.version}</version>
         <scope>test</scope>
       </dependency>
+      <dependency>
+        <groupId>junit</groupId>
+        <artifactId>junit</artifactId>
+        <version>${dep.junit.version}</version>
+        <scope>test</scope>
+      </dependency>
       <!-- jackson modules -->
       <dependency>
         <groupId>com.fasterxml.jackson.core</groupId>
@@ -168,8 +174,6 @@
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
-      <version>${dep.junit.version}</version>
-      <scope>test</scope>
     </dependency>
   </dependencies>
 
