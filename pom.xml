@@ -24,7 +24,7 @@
   </parent>
 
   <artifactId>jar-pom</artifactId>
-  <version>3.2.2-SNAPSHOT</version>
+  <version>3.3.0-SNAPSHOT</version>
   <packaging>pom</packaging>
   <name>addthis-oss-jar-pom</name>
   <description>Parent pom for AddThis open source maven projects that make jars</description>
