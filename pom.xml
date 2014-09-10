@@ -54,6 +54,11 @@
     <at.check.checkstyle.configLocation>https://raw.githubusercontent.com/addthis/addthis-oss-jar-pom/master/checkstyle/default.xml</at.check.checkstyle.configLocation>
     <at.check.findbugs.skip>${at.check.skip.all}</at.check.findbugs.skip>
     <at.check.jacoco.skip>${at.check.skip.all}</at.check.jacoco.skip>
+    <!-- TODO: Skipping rat does not actually work.  See RAT-173 Once
+         skipping works it should also be possible to create
+         properties for controlling builds failure. -->
+    <at.check.rat.skip>${at.check.skip.all}</at.check.rat.skip>
+
 
     <!-- core dependencies -->
     <dep.junit.version>4.11</dep.junit.version>
@@ -71,6 +76,7 @@
     <dep.plugin.javadoc.version>2.9.1</dep.plugin.javadoc.version>
     <dep.plugin.findbugs.version>3.0.0</dep.plugin.findbugs.version>
     <dep.plugin.checkstyle.version>2.12.1</dep.plugin.checkstyle.version>
+    <dep.plugin.rat.version>0.11</dep.plugin.rat.version>
   </properties>
 
   <dependencyManagement>
@@ -354,11 +360,16 @@
             </rules>
           </configuration>
         </plugin>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-checkstyle-plugin</artifactId>
-        <version>${dep.plugin.checkstyle.version}</version>
-      </plugin>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-checkstyle-plugin</artifactId>
+          <version>${dep.plugin.checkstyle.version}</version>
+        </plugin>
+        <plugin>
+          <groupId>org.apache.rat</groupId>
+          <artifactId>apache-rat-plugin</artifactId>
+          <version>${dep.plugin.rat.version}</version>
+        </plugin>
       </plugins>
     </pluginManagement>
 
@@ -403,6 +414,10 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-checkstyle-plugin</artifactId>
+      </plugin>
+        <plugin>
+          <groupId>org.apache.rat</groupId>
+          <artifactId>apache-rat-plugin</artifactId>
       </plugin>
     </plugins>
   </build>
@@ -506,6 +521,14 @@
           <encoding>UTF-8</encoding>
           <includeTestSourceDirectory>true</includeTestSourceDirectory>
           <consoleOutput>false</consoleOutput>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.rat</groupId>
+        <artifactId>apache-rat-plugin</artifactId>
+        <version>${dep.plugin.rat.version}</version>
+        <configuration>
+          <skip>${at.check.rat.skip}</skip>
         </configuration>
       </plugin>
     </plugins>
