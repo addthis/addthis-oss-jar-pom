@@ -358,7 +358,7 @@
       </plugins>
     </pluginManagement>
 
-    <!-- Maven is crazy DRY hostile, repeat the plugins here to actuall use them... -->
+    <!-- Maven is crazy DRY hostile, repeat the plugins here to actually use them... -->
     <plugins>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
