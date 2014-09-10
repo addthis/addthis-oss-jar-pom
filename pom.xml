@@ -52,6 +52,8 @@
     <enforcer.skip>true</enforcer.skip>
     <at.check.checkstyle.skip>${at.check.skip.all}</at.check.checkstyle.skip>
     <at.check.checkstyle.configLocation>https://raw.githubusercontent.com/addthis/addthis-oss-jar-pom/master/checkstyle/default.xml</at.check.checkstyle.configLocation>
+    <at.check.findbugs.skip>${at.check.skip.all}</at.check.findbugs.skip>
+    <at.check.jacoco.skip>${at.check.skip.all}</at.check.jacoco.skip>
 
     <!-- core dependencies -->
     <dep.junit.version>4.11</dep.junit.version>
@@ -411,13 +413,16 @@
         <groupId>org.jacoco</groupId>
         <artifactId>jacoco-maven-plugin</artifactId>
         <version>${dep.plugin.jacoco.version}</version>
+        <configuration>
+          <skip>${at.check.jacoco.skip}</skip>
+        </configuration>
       </plugin>
       <plugin>
         <groupId>org.codehaus.mojo</groupId>
         <artifactId>findbugs-maven-plugin</artifactId>
         <version>${dep.plugin.findbugs.version}</version>
         <configuration>
-          <skip>${at.check.skip.all}</skip>
+          <skip>${at.check.findbugs.skip}</skip>
           <failOnError>false</failOnError>
           <effort>Max</effort>
         </configuration>
