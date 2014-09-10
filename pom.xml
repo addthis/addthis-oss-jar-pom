@@ -230,11 +230,6 @@
           <groupId>org.codehaus.mojo</groupId>
           <artifactId>findbugs-maven-plugin</artifactId>
           <version>${dep.plugin.findbugs.version}</version>
-          <configuration>
-            <skip>${at.check.skip.all}</skip>
-            <failOnError>false</failOnError>
-            <effort>Max</effort>
-          </configuration>
         </plugin>
 
         <plugin>
@@ -422,9 +417,9 @@
         <artifactId>findbugs-maven-plugin</artifactId>
         <version>${dep.plugin.findbugs.version}</version>
         <configuration>
+          <skip>${at.check.skip.all}</skip>
+          <failOnError>false</failOnError>
           <effort>Max</effort>
-          <!-- <xmlOutput>true</xmlOutput> -->
-          <!-- <findbugsXmlOutputDirectory>target/site</findbugsXmlOutputDirectory> -->
         </configuration>
       </plugin>
       <plugin>
