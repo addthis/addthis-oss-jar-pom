@@ -50,6 +50,8 @@
     <at.test.excluded.groups />
     <at.check.skip.all>false</at.check.skip.all>
     <enforcer.skip>true</enforcer.skip>
+    <at.check.checkstyle.skip>${at.check.skip.all}</at.check.checkstyle.skip>
+    <at.check.checkstyle.configLocation>https://raw.githubusercontent.com/addthis/addthis-oss-jar-pom/master/checkstyle/default.xml</at.check.checkstyle.configLocation>
 
     <!-- core dependencies -->
     <dep.junit.version>4.11</dep.junit.version>
@@ -66,7 +68,7 @@
     <dep.plugin.jacoco.version>0.7.1.201405082137</dep.plugin.jacoco.version>
     <dep.plugin.javadoc.version>2.9.1</dep.plugin.javadoc.version>
     <dep.plugin.findbugs.version>3.0.0</dep.plugin.findbugs.version>
-    <dep.plugin.checkstyle.configLocation>https://raw.githubusercontent.com/addthis/addthis-oss-jar-pom/master/checkstyle/default.xml</dep.plugin.checkstyle.configLocation>
+    <dep.plugin.checkstyle.version>2.12.1</dep.plugin.checkstyle.version>
   </properties>
 
   <dependencyManagement>
@@ -355,6 +357,11 @@
             </rules>
           </configuration>
         </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-checkstyle-plugin</artifactId>
+        <version>${dep.plugin.checkstyle.version}</version>
+      </plugin>
       </plugins>
     </pluginManagement>
 
@@ -395,6 +402,10 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-enforcer-plugin</artifactId>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-checkstyle-plugin</artifactId>
       </plugin>
     </plugins>
   </build>
@@ -484,6 +495,18 @@
             </reports>
           </reportSet>
         </reportSets>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-checkstyle-plugin</artifactId>
+        <version>${dep.plugin.checkstyle.version}</version>
+        <configuration>
+          <skip>${at.check.checkstyle.skip}</skip>
+          <configLocation>${at.check.checkstyle.configLocation}</configLocation>
+          <encoding>UTF-8</encoding>
+          <includeTestSourceDirectory>true</includeTestSourceDirectory>
+          <consoleOutput>false</consoleOutput>
+        </configuration>
       </plugin>
     </plugins>
   </reporting>
