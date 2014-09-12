@@ -523,14 +523,15 @@
           <consoleOutput>false</consoleOutput>
         </configuration>
       </plugin>
-      <plugin>
-        <groupId>org.apache.rat</groupId>
-        <artifactId>apache-rat-plugin</artifactId>
-        <version>${dep.plugin.rat.version}</version>
-        <configuration>
-          <skip>${at.check.rat.skip}</skip>
-        </configuration>
-      </plugin>
+      <!-- enabling reporting in this pom blocked on RAT-173 -->
+      <!-- <plugin> -->
+      <!--   <groupId>org.apache.rat</groupId> -->
+      <!--   <artifactId>apache-rat-plugin</artifactId> -->
+      <!--   <version>${dep.plugin.rat.version}</version> -->
+      <!--   <configuration> -->
+      <!--     <skip>${at.check.rat.skip}</skip> -->
+      <!--   </configuration> -->
+      <!-- </plugin> -->
     </plugins>
   </reporting>
 
