@@ -61,8 +61,8 @@
 
 
     <!-- core dependencies -->
-    <dep.junit.version>4.11</dep.junit.version>
-    <dep.slf4j.version>1.7.7</dep.slf4j.version>
+    <dep.junit.version>4.12</dep.junit.version>
+    <dep.slf4j.version>1.7.10</dep.slf4j.version>
     <dep.metrics.version>2.2.0</dep.metrics.version>
     <dep.guava.version>17.0</dep.guava.version>
     <dep.joda-time.version>2.5</dep.joda-time.version>
@@ -71,9 +71,11 @@
     <dep.jackson.api.version>2.4.4</dep.jackson.api.version>
 
     <!-- plugins referenced multiple times -->
-    <dep.plugin.surefire.version>2.17</dep.plugin.surefire.version>
+    <dep.plugin.site.version>3.4</dep.plugin.site.version>
+    <dep.plugin.dependency.version>2.10</dep.plugin.dependency.version>
+    <dep.plugin.surefire.version>2.18.1</dep.plugin.surefire.version>
     <dep.plugin.jacoco.version>0.7.1.201405082137</dep.plugin.jacoco.version>
-    <dep.plugin.javadoc.version>2.9.1</dep.plugin.javadoc.version>
+    <dep.plugin.javadoc.version>2.10.1</dep.plugin.javadoc.version>
     <dep.plugin.findbugs.version>3.0.0</dep.plugin.findbugs.version>
     <dep.plugin.checkstyle.version>2.12.1</dep.plugin.checkstyle.version>
     <dep.plugin.rat.version>0.11</dep.plugin.rat.version>
@@ -233,6 +235,17 @@
             <showDeprecation>true</showDeprecation>
             <showWarnings>true</showWarnings>
           </configuration>
+        </plugin>
+
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-site-plugin</artifactId>
+          <version>${dep.plugin.site.version}</version>
+        </plugin>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-dependency-plugin</artifactId>
+          <version>${dep.plugin.dependency.version}</version>
         </plugin>
 
         <plugin>
