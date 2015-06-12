@@ -420,9 +420,11 @@
               <value>(The )?MIT License</value>
 
               <!-- Apache B-List, http://www.apache.org/legal/resolved.html#category-b -->
-              <value>CDDL + GPLv2 with classpath exception</value>
               <value>CDDL 1.1</value>
               <value>COMMON DEVELOPMENT AND DISTRIBUTION LICENSE \(CDDL\) Version 1.0</value>
+
+              <!-- javax.el license, GPLv2 with classpath exception is from Oracle -->
+              <value>CDDL + GPLv2 with classpath exception</value>
 
               <!-- provided scope -->
               <value>Sleepycat License</value>
