@@ -393,6 +393,65 @@
           <artifactId>apache-rat-plugin</artifactId>
           <version>${dep.plugin.rat.version}</version>
         </plugin>
+
+        <plugin>
+          <groupId>com.googlecode.maven-license-validator-plugin</groupId>
+          <artifactId>maven-license-validator-plugin</artifactId>
+          <version>0.3</version>
+          <executions>
+            <execution>
+              <phase>validate</phase>
+              <goals>
+                <goal>validate-licenses</goal>
+              </goals>
+            </execution>
+          </executions>
+          <configuration>
+            <allowedLicenses>
+              <!-- Apache A-List, http://www.apache.org/legal/resolved.html#category-a -->
+              <value>Apache 2</value>
+              <value>.*Apache.*License.*[12]?.*</value>
+              <value>ASL 2.0</value>
+              <value>(The |New )?BSD( [L|l]icense)?</value>
+              <value>(Revised|New|Simplified) BSD( License)?</value>
+              <value>sun developer network berkeley license</value>
+              <value>.*Eclipse.*License.*</value>
+              <value>Public Domain</value>
+              <value>(The )?MIT License</value>
+
+              <!-- Apache B-List, http://www.apache.org/legal/resolved.html#category-b -->
+              <value>CDDL + GPLv2 with classpath exception</value>
+              <value>CDDL 1.1</value>
+              <value>COMMON DEVELOPMENT AND DISTRIBUTION LICENSE \(CDDL\) Version 1.0</value>
+
+              <!-- provided scope -->
+              <value>Sleepycat License</value>
+            </allowedLicenses>
+            <allowedUnlicensed>
+              <!-- INRIA license, http://asm.ow2.org/license.html -->
+              <value>asm:asm:jar:.*</value>
+
+              <!-- Apache 2, http://commons.apache.org/proper/commons-beanutils/ -->
+              <value>commons-beanutils:commons-beanutils:jar:.*</value>
+
+              <!-- presumably CDDL 1.0, https://glassfish.dev.java.net/public/CDDLv1.0.html -->
+              <!-- source: http://stackoverflow.com/questions/16343572/license-for-glassfish-javax-servlet-servlet-api-version-2-5 -->
+              <value>javax.servlet:servlet-api:jar:</value>
+
+              <!-- CDDL 1.1, https://jsp.java.net/license.html -->
+              <value>javax.servlet.jsp:jsp-api:jar:.*</value>
+
+              <!-- distributed with the sun JDK -->
+              <value>jdk.tools:jdk.tools:.*:.*</value>
+
+              <!-- Apache 2, https://zookeeper.apache.org/ -->
+              <value>org.apache.zookeeper:zookeeper:pom:.*</value>
+
+              <!-- Apache 2, packaged in artifact -->
+              <value>org.codehaus.jettison:jettison:bundle:.*</value>
+            </allowedUnlicensed>
+          </configuration>
+        </plugin>
       </plugins>
     </pluginManagement>
 
