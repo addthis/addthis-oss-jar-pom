@@ -79,6 +79,7 @@
     <dep.plugin.findbugs.version>3.0.0</dep.plugin.findbugs.version>
     <dep.plugin.checkstyle.version>2.12.1</dep.plugin.checkstyle.version>
     <dep.plugin.rat.version>0.11</dep.plugin.rat.version>
+    <dep.plugin.license.validator.version>0.3</dep.plugin.license.validator.version>
   </properties>
 
   <dependencyManagement>
@@ -397,7 +398,7 @@
         <plugin>
           <groupId>com.googlecode.maven-license-validator-plugin</groupId>
           <artifactId>maven-license-validator-plugin</artifactId>
-          <version>0.3</version>
+          <version>${dep.plugin.license.validator.version}</version>
           <executions>
             <execution>
               <phase>validate</phase>
