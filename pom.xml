@@ -64,7 +64,7 @@
     <dep.junit.version>4.12</dep.junit.version>
     <dep.slf4j.version>1.7.10</dep.slf4j.version>
     <dep.metrics.version>2.2.0</dep.metrics.version>
-    <dep.guava.version>17.0</dep.guava.version>
+    <dep.guava.version>19.0</dep.guava.version>
     <dep.joda-time.version>2.5</dep.joda-time.version>
     <dep.jackson.version>2.4.4</dep.jackson.version>
     <dep.jackson.etc.version>2.4.4</dep.jackson.etc.version>
