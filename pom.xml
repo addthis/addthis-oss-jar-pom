@@ -66,9 +66,9 @@
     <dep.metrics.version>2.2.0</dep.metrics.version>
     <dep.guava.version>19.0</dep.guava.version>
     <dep.joda-time.version>2.5</dep.joda-time.version>
-    <dep.jackson.version>2.4.4</dep.jackson.version>
-    <dep.jackson.etc.version>2.4.4</dep.jackson.etc.version>
-    <dep.jackson.api.version>2.4.4</dep.jackson.api.version>
+    <dep.jackson.version>2.6.7</dep.jackson.version>
+    <dep.jackson.etc.version>2.6.7</dep.jackson.etc.version>
+    <dep.jackson.api.version>2.6.7</dep.jackson.api.version>
 
     <!-- plugins referenced multiple times -->
     <dep.plugin.site.version>3.5.1</dep.plugin.site.version>
