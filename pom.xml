@@ -24,7 +24,7 @@
   </parent>
 
   <artifactId>jar-pom</artifactId>
-  <version>3.9.1</version>
+  <version>3.9.2-SNAPSHOT</version>
   <packaging>pom</packaging>
   <name>addthis-oss-jar-pom</name>
   <description>Parent pom for AddThis open source maven projects that make jars</description>
@@ -40,7 +40,7 @@
     <connection>scm:git:git@github.com:addthis/addthis-oss-jara-pom.git</connection>
     <developerConnection>scm:git:git@github.com:addthis/addthis-oss-jar-pom.git</developerConnection>
     <url>https://github.com/addthis/addthis-oss-jar-pom</url>
-    <tag>v3.9.1</tag>
+    <tag>HEAD</tag>
   </scm>
 
   <properties>
